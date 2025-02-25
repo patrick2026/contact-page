@@ -1,9 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagina de Contato</title>
   </head>
-  <body></body>
+  <body>
+    <div id="main-container">
+      <div id="address-container">
+        <div class="fade"></div>
+        <div id="address-content">
+          <h2><ion-icon name="navigate-outline"></ion-icon> Endereço</h2>
+          <p>Rua das Flores, 133, Bairro Jardim.</p>
+          <h2><ion-icon name="call-outline"></ion-icon> Telefone</h2>
+          <p>(28)99903-3410</p>
+          <h2><ion-icon name="mail-outline"></ion-icon> E-mail</h2>
+          <p>patrickventura2024@gmail.com</p>
+        </div>
+      </div>
+      <div id="form-container">
+        <h2>Nos mande uma mensagem!</h2>
+        <form id="contact-form">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Digite seu nome"
+            required
+          />
+          <label for="email">E-mail:</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Digite seu e-mail"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            title="Digite um e-mail válido (exemplo: usuario@email.com)"
+            required
+          />
+          <label for="phone">Telefone:</label>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Digite seu telefone (XX 9XXXXXXXX)"
+            pattern="\d{2}\s9\d{8}"
+            title="Digite no formato: XX 9XXXXXXXX"
+            required
+          />
+          <label for="msg">Sua mensagem</label>
+          <textarea name="msg" placeholder="Como podemos te ajudar?"></textarea>
+          <input type="submit" value="Enviar mensagem" />
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  </body>
 </html>
